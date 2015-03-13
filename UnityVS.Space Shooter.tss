@@ -2,10 +2,13 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>D:\Projects\Unity\Space Shooter\Assets\Scripts\Helpers\Boundary.cs</string>
+      <string>d:\projects\unity\space shooter\assets\scripts\helpers\boundary.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>D:\Projects\Unity\Space Shooter\Assets\Scripts\PlayerController.cs</string>
+      <string>D:\Projects\Unity\Space Shooter\Assets\Scripts\Mover.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>d:\projects\unity\space shooter\assets\scripts\playercontroller.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

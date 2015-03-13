@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Assets.Scripts.Helpers;
 
 public class PlayerController : MonoBehaviour
@@ -7,6 +8,12 @@ public class PlayerController : MonoBehaviour
     public float Speed;
     public float Tilt;
     public Boundary Boundary;
+
+    public GameObject Shot;
+    public Transform ShotSpawn;
+    public float FireRate;
+
+    private float nextFire = 0;
 
     public void FixedUpdate()
     {
@@ -25,5 +32,14 @@ public class PlayerController : MonoBehaviour
         );
 
         rigidbody.rotation = Quaternion.Euler(0.0f, 0.0f, rigidbody.velocity.x * -this.Tilt);
+    }
+
+    public void Update()
+    {
+        if (Input.GetButton("Fire1") && Time.time > this.nextFire)
+        {
+            this.nextFire = Time.time + this.FireRate;
+            Instantiate(this.Shot, this.ShotSpawn.position, this.ShotSpawn.rotation);
+        }
     }
 }
