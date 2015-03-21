@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Helpers;
 
+[RequireComponent(typeof(AudioSource))]
 public class PlayerController : MonoBehaviour
 {
     public float Speed;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
         {
             this.nextFire = Time.time + this.FireRate;
             Instantiate(this.Shot, this.ShotSpawn.position, this.ShotSpawn.rotation);
+            this.GetComponent<AudioSource>().Play();
         }
     }
 }
